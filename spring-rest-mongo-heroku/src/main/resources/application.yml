@@ -1,0 +1,18 @@
+# Spring boot settings
+# mongodb://root:root12345@ds057816.mlab.com:57816/my-database
+spring:
+  data:
+    mongodb:
+      host: ds057816.mlab.com
+      port: 57816
+      database: my-database
+      username: root
+      password: root12345
+
+# The embedded server settings
+server:
+  port: ${PORT:8080}
+
+# Scheduler configuration
+scheduler:
+  cron-every-5-mins: 0 0/1 * * * ?
