@@ -15,4 +15,4 @@ server:
 
 # Scheduler configuration
 scheduler:
-  cron-every-5-mins: 0 0/1 * * * ?
+  cron-every-5-mins: 0 0/5 * * * ?
