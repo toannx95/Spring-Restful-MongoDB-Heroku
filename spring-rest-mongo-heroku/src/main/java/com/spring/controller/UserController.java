@@ -1,9 +1,6 @@
 package com.spring.controller;
 
-import java.util.logging.Logger;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,15 +19,8 @@ import com.spring.service.UserService;
 @RequestMapping("/users")
 public class UserController {
 
-	private static final Logger LOGGER = Logger.getLogger(UserController.class.getName());
-
 	@Autowired
 	private UserService userService;
-
-	@Scheduled(cron = "${scheduler.cron-every-5-mins}")
-	private void runScheduler() {
-		LOGGER.info("runScheduler");
-	}
 
 	@GetMapping
 	public Iterable<User> getAllUsers() {
